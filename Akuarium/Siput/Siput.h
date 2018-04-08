@@ -1,3 +1,4 @@
+//Dibuat Tanor
 #ifndef SIPUT_H
 #define SIPUT_H
 

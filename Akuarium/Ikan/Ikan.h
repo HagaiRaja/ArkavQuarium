@@ -1,3 +1,4 @@
+//Dibuat Hagai
 #ifndef IKAN_H
 #define IKAN_H
 

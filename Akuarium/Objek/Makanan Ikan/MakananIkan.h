@@ -1,3 +1,4 @@
+//Dibuat Eka
 #ifndef MAKANANIKAN_H
 #define MAKANANIKAN_H
 

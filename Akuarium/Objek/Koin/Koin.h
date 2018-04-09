@@ -1,4 +1,3 @@
-//Dibuat Eka
 #ifndef KOIN_H
 #define KOIN_H
 
@@ -9,10 +8,7 @@
 class Koin : class Objek {
 public :
 	friend class Siput;
-
-	// Definisi Jenis Koin
-	enum CoinType { Bronze, Silver, Gold };
-
+	
 	/* Konstruktor untuk menentukan posisi koin ketika pertama kali dibangkitkan*/
 	Koin(int _value, int _x, int _y);
 	/* dtor untuk mengurangi nilai Number of Coin */
@@ -26,6 +22,6 @@ public :
 	static void setNumberOfCoin(int);
 	
 private :
-	const CoinType value; 		// Bronze, Silver or Gold
+	int value; 		// Bronze, Silver or Gold
 	static int numberOfCoin;
 };

@@ -1,4 +1,3 @@
-//Dibuat Hagai
 #ifndef IKAN_H
 #define IKAN_H
 
@@ -15,15 +14,15 @@ public:
 	};
 
 	/* Konstruktor untuk menentukan posisi ikan ketika pertama kali dibangkitkan*/
-	Ikan(int _x, int _y);
+	Ikan(int _x, int _y, double nowTime);
 	
 	/* Destruktor untuk memusnahkan ikan */
 	~Ikan();
 	/* Method untuk menentukan apakah ikan lapar atau tidak */
-	bool GetHunger() const;
+	bool getHunger() const;
 	
 	/* Method untuk mengeset apakah ikan lapar atau tidak */
-	void SetHunger(bool);
+	void setHunger(bool);
 
 	/* Method untuk pergerakan ikan */
 	void Move();
@@ -31,6 +30,15 @@ public:
 	// setter and getter
 	FishLevel getLevel() const;
 	void setLevel(FishLevel);
+	double getLastHungry() const;
+	void setLastHungry(double);
+	double getStartHungry() const;
+	void setStartHungry(double);
+	double getLastCoinDrop() const;
+	void setLastCoinDrop(double);
+
+	static int getFishPopulation();
+
 	
 	/* Method yang tidak melakukan apapun */
 	virtual void Eat() = 0;
@@ -39,10 +47,17 @@ public:
 	virtual void DropCoin() = 0; 
 
 private:
+	static int fishPopulation;
 	// BabyFish(lv1), TeenFish(lv2) and AdultFish(lv3)
 	FishLevel level;
 	// false means not hungry, vice versa 
-	bool hunger;		
+	bool hunger;
+	// Time since the last hungry
+	double lastHungry;
+	// Time since start hungry
+	double startHungry;
+	// Time since the last coin dropped
+	double lastCoinDrop;		
 };
 
 #endif

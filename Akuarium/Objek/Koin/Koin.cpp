@@ -1,21 +1,22 @@
-#include "../Objek.h"
-#include "../../Siput/Siput.h"
 #include "Koin.h"
-#include <iostream>
+#include "oop.hpp"
+#include <bits/stdc++.h>
 
-Koin(int _value, int _x, int _y){
+Koin :: Koin(int _value, int _x, int _y) : Akuarium(_x,_y){ 
+	this -> value = _value;
+}
+
+Koin :: ~Koin(){
 
 }
-/* dtor untuk mengurangi nilai Number of Coin */
-~Koin();
 
-/* Method untuk mendapat nilai koin */
-int getValue() const;
+int Koin :: getValue() const{
+	return this -> value;
+} 
 
-/* Getter dan Setter untuk jumlah koin */
-static int getNumberOfCoin() const{
-	return numberOfCoin;
+static int Koin :: getNumberOfCoin() const{
+	return this -> numberOfCoin;
 }
-static void setNumberOfCoin(int n){
-	
+static void Koin :: setNumberOfCoin(int A){
+	this -> numberOfCoin = A;
 }

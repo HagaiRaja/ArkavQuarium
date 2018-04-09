@@ -21,4 +21,5 @@ public :
 private :
 	static int numberOfFood;
 };
+
 #endif
